@@ -15,11 +15,10 @@ body {
     color: #1d1d1d;
 }
 
-/* MENU FIXO */
+/* MENU */
 .menu {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     background-color: #1d1d1d;
     padding: 15px 50px;
@@ -38,7 +37,7 @@ body {
 .links a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 22px;
     font-weight: bold;
 }
 
@@ -49,20 +48,21 @@ body {
 /* BANNER */
 .banner {
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200");
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200");
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 100px 20px;
+    align-items: center;
     color: white;
+    text-align: center;
+    padding: 120px 20px;
 }
 
 .banner h1 {
-    font-size: 48px;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
@@ -92,11 +92,11 @@ section {
 section h2 {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 40px;
     color: #d62828;
+    margin-bottom: 40px;
 }
 
-/* CARDÁPIO */
+/* CARDÁPIO E CARDS */
 .cards {
     display: flex;
     justify-content: center;
@@ -109,9 +109,10 @@ section h2 {
     width: 280px;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
     text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
     transition: 0.3s;
+    padding-bottom: 20px;
 }
 
 .card:hover {
@@ -126,12 +127,13 @@ section h2 {
 
 .card h3 {
     font-size: 24px;
-    margin: 18px 0 10px;
+    margin: 18px 10px 10px;
 }
 
 .card p {
     padding: 0 18px;
     color: #555;
+    line-height: 1.5;
 }
 
 .card span {
@@ -140,6 +142,20 @@ section h2 {
     font-size: 22px;
     font-weight: bold;
     color: #d62828;
+}
+
+.card button {
+    background-color: #f77f00;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #d62828;
 }
 
 /* PROMOÇÕES */
@@ -167,10 +183,48 @@ section h2 {
     margin-bottom: 15px;
 }
 
+.promo-box p {
+    font-size: 18px;
+}
+
 .promo-box h1 {
     font-size: 42px;
     margin-top: 15px;
     color: #fcbf49;
+}
+
+/* DIFERENCIAIS */
+.diferenciais {
+    background-color: #fff8f0;
+}
+
+/* GALERIA */
+.galeria {
+    background-color: #1d1d1d;
+}
+
+.galeria h2 {
+    color: #fcbf49;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.fotos img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.fotos img:hover {
+    transform: scale(1.05);
 }
 
 /* SOBRE */
@@ -212,6 +266,33 @@ section h2 {
     font-style: italic;
 }
 
+/* CARRINHO */
+.carrinho {
+    background-color: white;
+    text-align: center;
+}
+
+#lista-pedidos {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+#lista-pedidos li {
+    background-color: #fff8f0;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.total {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d62828;
+    margin-bottom: 20px;
+}
+
 /* CONTATO */
 .contato {
     background-color: #fff8f0;
@@ -222,7 +303,6 @@ section h2 {
     margin: auto;
     display: flex;
     gap: 30px;
-    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -234,30 +314,6 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.mapa {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 18px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
-}
-
-.mapa h3 {
-    color: #d62828;
-    font-size: 24px;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.mapa iframe {
-    width: 100%;
-    height: 300px;
-    border: 0;
-    border-radius: 14px;
 }
 
 input,
@@ -289,6 +345,30 @@ button:hover {
     background-color: #f77f00;
 }
 
+.mapa {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+}
+
+.mapa h3 {
+    color: #d62828;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 14px;
+}
+
 /* RODAPÉ */
 footer {
     background-color: #1d1d1d;
@@ -306,6 +386,44 @@ footer p {
     margin: 8px 0;
 }
 
+.redes {
+    margin: 18px 0;
+}
+
+.redes a {
+    color: #fcbf49;
+    font-size: 28px;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: #f77f00;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: #25D366;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
@@ -316,6 +434,7 @@ footer p {
 
     .links {
         margin-top: 10px;
+        text-align: center;
     }
 
     .links a {
@@ -341,37 +460,19 @@ footer p {
         max-width: 330px;
     }
 
-    .contato-conteudo {
-        flex-direction: column;
-        align-items: center;
+    .fotos img {
+        width: 100%;
+        max-width: 330px;
     }
 
     form,
     .mapa {
         width: 100%;
     }
-}
 
-
-.whatsapp {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    background-color: #25D366;
-    color: white;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 1000;
-    transition: 0.3s;
-}
-
-.whatsapp:hover {
-    transform: scale(1.1);
+    .whatsapp {
+        width: 58px;
+        height: 58px;
+        font-size: 30px;
+    }
 }

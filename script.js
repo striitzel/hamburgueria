@@ -7,8 +7,8 @@ function adicionarPedido(nome, preco) {
 
     atualizarCarrinho();
 }
-function atualizarCarrinho() {
 
+function atualizarCarrinho() {
     const lista = document.getElementById("lista-pedidos");
     const totalElemento = document.getElementById("total");
 
@@ -22,8 +22,8 @@ function atualizarCarrinho() {
 
     totalElemento.textContent = total.toFixed(2).replace(".", ",");
 }
-function finalizarPedido() {
 
+function finalizarPedido() {
     if (pedidos.length === 0) {
         alert("Adicione algum item ao pedido primeiro!");
         return;
